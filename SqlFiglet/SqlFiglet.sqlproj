@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>SqlFiglet</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{e0f2a646-a051-455f-a517-3d0d9810d6e2}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql110DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>SqlFiglet</RootNamespace>
+    <AssemblyName>SqlFiglet</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <GenerateSqlClrSymbols>True</GenerateSqlClrSymbols>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <!-- VS10 without SP1 will not have VisualStudioVersion set, so do that here -->
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <!-- Default to the v10.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="fonts" />
+    <Folder Include="Test Scripts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Figlet.cs" />
+    <Compile Include="fonts\3-d.cs" />
+    <Compile Include="fonts\5lineoblique.cs" />
+    <Compile Include="fonts\3x5.cs" />
+    <Compile Include="fonts\whimsy.cs" />
+    <Compile Include="fonts\acrobatic.cs" />
+    <Compile Include="fonts\alligator.cs" />
+    <Compile Include="fonts\alligator2.cs" />
+    <Compile Include="fonts\alphabet.cs" />
+    <Compile Include="fonts\avatar.cs" />
+    <Compile Include="fonts\banner.cs" />
+    <Compile Include="fonts\banner3.cs" />
+    <Compile Include="fonts\banner3-D.cs" />
+    <Compile Include="fonts\banner4.cs" />
+    <Compile Include="fonts\barbwire.cs" />
+    <Compile Include="fonts\basic.cs" />
+    <Compile Include="fonts\bell.cs" />
+    <Compile Include="fonts\big.cs" />
+    <Compile Include="fonts\bigchief.cs" />
+    <Compile Include="fonts\binary.cs" />
+    <Compile Include="fonts\block.cs" />
+    <Compile Include="fonts\broadway.cs" />
+    <Compile Include="fonts\bubble.cs" />
+    <Compile Include="fonts\bulbhead.cs" />
+    <Compile Include="fonts\calgphy2.cs" />
+    <Compile Include="fonts\caligraphy.cs" />
+    <Compile Include="fonts\catwalk.cs" />
+    <Compile Include="fonts\chunky.cs" />
+    <Compile Include="fonts\coinstak.cs" />
+    <Compile Include="fonts\colossal.cs" />
+    <Compile Include="fonts\computer.cs" />
+    <Compile Include="fonts\contessa.cs" />
+    <Compile Include="fonts\contrast.cs" />
+    <Compile Include="fonts\cosmic.cs" />
+    <Compile Include="fonts\cosmike.cs" />
+    <Compile Include="fonts\crawford.cs" />
+    <Compile Include="fonts\cricket.cs" />
+    <Compile Include="fonts\cyberlarge.cs" />
+    <Compile Include="fonts\cybermedium.cs" />
+    <Compile Include="fonts\cybersmall.cs" />
+    <Compile Include="fonts\decimal.cs" />
+    <Compile Include="fonts\diamond.cs" />
+    <Compile Include="fonts\digital.cs" />
+    <Compile Include="fonts\doh.cs" />
+    <Compile Include="fonts\doom.cs" />
+    <Compile Include="fonts\dosrebel.cs" />
+    <Compile Include="fonts\dotmatrix.cs" />
+    <Compile Include="fonts\double.cs" />
+    <Compile Include="fonts\drpepper.cs" />
+    <Compile Include="fonts\dwhistled.cs" />
+    <Compile Include="fonts\eftichess.cs" />
+    <Compile Include="fonts\eftifont.cs" />
+    <Compile Include="fonts\eftipiti.cs" />
+    <Compile Include="fonts\eftirobot.cs" />
+    <Compile Include="fonts\eftitalic.cs" />
+    <Compile Include="fonts\eftiwall.cs" />
+    <Compile Include="fonts\eftiwater.cs" />
+    <Compile Include="fonts\epic.cs" />
+    <Compile Include="fonts\fender.cs" />
+    <Compile Include="fonts\fourtops.cs" />
+    <Compile Include="fonts\fraktur.cs" />
+    <Compile Include="fonts\fuzzy.cs" />
+    <Compile Include="fonts\goofy.cs" />
+    <Compile Include="fonts\gothic.cs" />
+    <Compile Include="fonts\graceful.cs" />
+    <Compile Include="fonts\graffiti.cs" />
+    <Compile Include="fonts\hex.cs" />
+    <Compile Include="fonts\hollywood.cs" />
+    <Compile Include="fonts\invita.cs" />
+    <Compile Include="fonts\isometric1.cs" />
+    <Compile Include="fonts\isometric2.cs" />
+    <Compile Include="fonts\isometric3.cs" />
+    <Compile Include="fonts\isometric4.cs" />
+    <Compile Include="fonts\italic.cs" />
+    <Compile Include="fonts\ivrit.cs" />
+    <Compile Include="fonts\jazmine.cs" />
+    <Compile Include="fonts\katakana.cs" />
+    <Compile Include="fonts\kban.cs" />
+    <Compile Include="fonts\l4me.cs" />
+    <Compile Include="fonts\larry3d.cs" />
+    <Compile Include="fonts\lcd.cs" />
+    <Compile Include="fonts\lean.cs" />
+    <Compile Include="fonts\letters.cs" />
+    <Compile Include="fonts\linux.cs" />
+    <Compile Include="fonts\lockergnome.cs" />
+    <Compile Include="fonts\madrid.cs" />
+    <Compile Include="fonts\marquee.cs" />
+    <Compile Include="fonts\maxfour.cs" />
+    <Compile Include="fonts\mike.cs" />
+    <Compile Include="fonts\mini.cs" />
+    <Compile Include="fonts\mirror.cs" />
+    <Compile Include="fonts\nancyj.cs" />
+    <Compile Include="fonts\nancyj-fancy.cs" />
+    <Compile Include="fonts\nancyj-underlined.cs" />
+    <Compile Include="fonts\nipples.cs" />
+    <Compile Include="fonts\nvscript.cs" />
+    <Compile Include="fonts\o8.cs" />
+    <Compile Include="fonts\octal.cs" />
+    <Compile Include="fonts\ogre.cs" />
+    <Compile Include="fonts\os2.cs" />
+    <Compile Include="fonts\pawp.cs" />
+    <Compile Include="fonts\peaks.cs" />
+    <Compile Include="fonts\pebbles.cs" />
+    <Compile Include="fonts\pepper.cs" />
+    <Compile Include="fonts\poison.cs" />
+    <Compile Include="fonts\puffy.cs" />
+    <Compile Include="fonts\pyramid.cs" />
+    <Compile Include="fonts\rectangles.cs" />
+    <Compile Include="fonts\relief.cs" />
+    <Compile Include="fonts\relief2.cs" />
+    <Compile Include="fonts\rev.cs" />
+    <Compile Include="fonts\roman.cs" />
+    <Compile Include="fonts\rot13.cs" />
+    <Compile Include="fonts\rounded.cs" />
+    <Compile Include="fonts\rowancap.cs" />
+    <Compile Include="fonts\rozzo.cs" />
+    <Compile Include="fonts\runyc.cs" />
+    <Compile Include="fonts\sblood.cs" />
+    <Compile Include="fonts\script.cs" />
+    <Compile Include="fonts\serifcap.cs" />
+    <Compile Include="fonts\shadow.cs" />
+    <Compile Include="fonts\short.cs" />
+    <Compile Include="fonts\slant.cs" />
+    <Compile Include="fonts\slide.cs" />
+    <Compile Include="fonts\slscript.cs" />
+    <Compile Include="fonts\small.cs" />
+    <Compile Include="fonts\smisome1.cs" />
+    <Compile Include="fonts\smkeyboard.cs" />
+    <Compile Include="fonts\smscript.cs" />
+    <Compile Include="fonts\smshadow.cs" />
+    <Compile Include="fonts\smslant.cs" />
+    <Compile Include="fonts\speed.cs" />
+    <Compile Include="fonts\stacey.cs" />
+    <Compile Include="fonts\stampatello.cs" />
+    <Compile Include="fonts\standard.cs" />
+    <Compile Include="fonts\starwars.cs" />
+    <Compile Include="fonts\stellar.cs" />
+    <Compile Include="fonts\stop.cs" />
+    <Compile Include="fonts\straight.cs" />
+    <Compile Include="fonts\tanja.cs" />
+    <Compile Include="fonts\term.cs" />
+    <Compile Include="fonts\thick.cs" />
+    <Compile Include="fonts\thin.cs" />
+    <Compile Include="fonts\threepoint.cs" />
+    <Compile Include="fonts\ticks.cs" />
+    <Compile Include="fonts\ticksslant.cs" />
+    <Compile Include="fonts\tinker-toy.cs" />
+    <Compile Include="fonts\tombstone.cs" />
+    <Compile Include="fonts\trek.cs" />
+    <Compile Include="fonts\tsalagi.cs" />
+    <Compile Include="fonts\twopoint.cs" />
+    <Compile Include="fonts\univers.cs" />
+    <Compile Include="fonts\usaflag.cs" />
+    <Compile Include="fonts\weird.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Test Scripts\TestingScript.sql" />
+  </ItemGroup>
+</Project>
